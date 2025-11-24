@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATA_DIR="../nuscenes"
+DATA_DIR="/home/jz/liufeng/ml/dataset_lf/nuscenes"
 # there should be ${DATA_DIR}/full_v1.0/
 # and also ${DATA_DIR}/mini
 
@@ -14,7 +14,7 @@ python train_nuscenes.py \
        --max_iters=25000 \
        --log_freq=1000 \
        --dset='mini' \
-       --batch_size=1 \
+       --batch_size=4 \
        --grad_acc=5 \
        --data_dir=$DATA_DIR \
        --log_dir='logs_nuscenes' \
